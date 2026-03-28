@@ -233,8 +233,8 @@ class Zchat < Formula
     # Link zchat-channel from the resource (not auto-linked by Homebrew)
     bin.install_symlink libexec/"bin/zchat-channel"
 
-    # Generate and install zsh completion (Typer uses --show-completion without shell arg)
-    (zsh_completion/"_zchat").write Utils.safe_popen_read({ "SHELL" => "zsh", "_ZCHAT_COMPLETE" => "zsh_source" }, bin/"zchat")
+    # Generate and install zsh completion
+    generate_completions_from_executable(bin/"zchat", "--show-completion", shells: [:zsh], shell_parameter_format: :none)
   end
 
   def caveats
