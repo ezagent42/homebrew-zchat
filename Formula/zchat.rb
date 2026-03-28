@@ -232,6 +232,9 @@ class Zchat < Formula
     virtualenv_install_with_resources
     # Link zchat-channel from the resource (not auto-linked by Homebrew)
     bin.install_symlink libexec/"bin/zchat-channel"
+
+    # Generate and install shell completions
+    generate_completions_from_executable(bin/"zchat", "--show-completion", shells: [:zsh])
   end
 
   def caveats
