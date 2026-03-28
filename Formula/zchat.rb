@@ -7,7 +7,9 @@ class Zchat < Formula
   sha256 "5718e6a8f7af2289a215771a1d282f6e0db40818a1b8ff33cca06524ac1c2748"
   license "MIT"
 
+  depends_on "openssl@3"
   depends_on "python@3.12"
+  depends_on "rust" => :build
   depends_on "tmux"
 
   resource "annotated-doc" do
