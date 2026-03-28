@@ -274,6 +274,8 @@ class Zchat < Formula
 
   def install
     virtualenv_install_with_resources
+    # Link zchat-channel from the resource (not auto-linked by Homebrew)
+    bin.install_symlink libexec/"bin/zchat-channel"
   end
 
   def caveats
