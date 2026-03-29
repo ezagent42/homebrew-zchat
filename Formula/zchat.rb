@@ -6,6 +6,7 @@ class Zchat < Formula
   url "https://files.pythonhosted.org/packages/52/ee/7fa2ccd845ec34f36e5752e781b9b819b260cb4628e48b6a0ce67da5d1e0/zchat-0.3.0.tar.gz"
   sha256 "5718e6a8f7af2289a215771a1d282f6e0db40818a1b8ff33cca06524ac1c2748"
   license "MIT"
+  head "https://github.com/ezagent42/zchat.git", branch: "main"
 
   depends_on "cryptography"
   depends_on "pydantic"
@@ -13,6 +14,7 @@ class Zchat < Formula
   depends_on "rpds-py"
   depends_on "tmux"
 
+  # Third-party PyPI resources (used by both stable and HEAD builds)
   resource "annotated-doc" do
     url "https://files.pythonhosted.org/packages/57/ba/046ceea27344560984e26a590f90bc7f4a75b06701f653222458922b558c/annotated_doc-0.0.4.tar.gz"
     sha256 "fbcda96e87e9c92ad167c2e53839e57503ecfda18804ea28102353485033faa4"
@@ -218,22 +220,23 @@ class Zchat < Formula
     sha256 "9b1f190ce15a2dd22e7758651d9b6d12df09a13d51ba5bf4fc33c383a48e1775"
   end
 
-  resource "zchat-channel-server" do
-    url "https://files.pythonhosted.org/packages/7d/85/11011e90a3699ee0d53357667bafad547f4f37f03a69e73f2cd28003634f/zchat_channel_server-0.2.0.tar.gz"
-    sha256 "9541f91502aa769f6af8772da05925525c968ebab7ca58795b7997d76b56cfcd"
-  end
-
-  resource "zchat-protocol" do
-    url "https://files.pythonhosted.org/packages/11/f3/8e193138cc9a8d7cffa9676b189d38d1635e7b205c74ade579a9373495a4/zchat_protocol-0.1.0.tar.gz"
-    sha256 "37ab16e53adf028a0426cb3bd64545f767762bc6e7dae884793814b0ac18541b"
-  end
-
   def install
-    virtualenv_install_with_resources
-    # Link zchat-channel from the resource (not auto-linked by Homebrew)
-    bin.install_symlink libexec/"bin/zchat-channel"
+    venv = virtualenv_create(libexec, "python3.14")
 
-    # Note: run `zchat --install-completion` after install for shell completions
+    if build.head?
+      # Dev channel: install from git checkout + submodule repos
+      venv.pip_install resources
+      system libexec/"bin/pip", "install", "--no-deps",
+        "zchat-protocol @ git+https://github.com/ezagent42/zchat-protocol.git@main",
+        "zchat-channel-server @ git+https://github.com/ezagent42/claude-zchat-channel.git@main"
+      system libexec/"bin/pip", "install", "--no-deps", "."
+    else
+      # Stable channel: all from PyPI resources
+      venv.pip_install resources
+      venv.pip_install_and_link buildpath
+    end
+
+    bin.install_symlink libexec/"bin/zchat-channel"
   end
 
   def caveats
@@ -246,6 +249,9 @@ class Zchat < Formula
 
       For IRC client UI, install WeeChat:
         brew install weechat
+
+      To update to latest dev version:
+        zchat self-update
     EOS
   end
 
