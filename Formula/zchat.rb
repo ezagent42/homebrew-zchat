@@ -254,7 +254,7 @@ class Zchat < Formula
         s.gsub! /^\[tool\.uv\.sources\].*?\n(.*=.*\n)*/, ""
       end
       venv.pip_install resources
-      system libexec/"bin/pip", "install", "--no-deps", buildpath
+      system libexec/"bin/pip", "install", "--no-deps", "-v", buildpath
     else
       # Stable channel: all from PyPI resources
       venv.pip_install resources
