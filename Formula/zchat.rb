@@ -28,8 +28,8 @@ class Zchat < Formula
   end
 
   resource "tomli-w" do
-    url "https://files.pythonhosted.org/packages/49/05/6bf21838623186b91aeef5cb1571f52571c11fee41f0f22714f8a553fad3/tomli_w-1.2.0.tar.gz"
-    sha256 "2e19e3e5fe6e62930f44e9e5e281e91a753ad8a65e8a09bae1e4b158083e7cb0"
+    url "https://files.pythonhosted.org/packages/19/75/241269d1da26b624c0d5e110e8149093c759b7a286138f4efd61a60e75fe/tomli_w-1.2.0.tar.gz"
+    sha256 "2dd14fac5a47c27be9cd4c976af5a12d87fb1f0b4512f81d69cce3b35ae25021"
   end
 
   # Third-party PyPI resources
