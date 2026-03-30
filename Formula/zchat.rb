@@ -3,8 +3,8 @@ class Zchat < Formula
 
   desc "Multi-agent collaboration over IRC — CLI for Claude Code agents"
   homepage "https://github.com/ezagent42/zchat"
-  url "https://files.pythonhosted.org/packages/d7/f2/cda89fdcb5edc0f6fb0c525b3a0128b4b777d7e15f1b0c2ac2d8654f67fa/zchat-0.3.1.dev26.tar.gz"
-  sha256 "c38f975820e403628b1fbe205279630611e111d52402e36b4c590c20dc054704"
+  url "https://files.pythonhosted.org/packages/80/82/887ebea04a7fffddc2b365024e50dd376fdceb9ef1d14dc5e97eba410998/zchat-0.3.1.dev27.tar.gz"
+  sha256 "7aa38a952c9e24f426fb9947116a8f22c9c681612e0d57b042a54a5511a85d47"
   license "MIT"
   # HEAD tracks the latest commit on main — install with: brew install --HEAD zchat
   # Upgrade with: brew upgrade --fetch-HEAD zchat
