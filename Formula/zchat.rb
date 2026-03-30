@@ -16,7 +16,23 @@ class Zchat < Formula
   depends_on "rpds-py"
   depends_on "tmux"
 
-  # Third-party PyPI resources (used by both stable and HEAD builds)
+  # zchat submodule packages (from PyPI — submodules can't be cloned in Homebrew sandbox)
+  resource "zchat-protocol" do
+    url "https://files.pythonhosted.org/packages/11/f3/8e193138cc9a8d7cffa9676b189d38d1635e7b205c74ade579a9373495a4/zchat_protocol-0.1.0.tar.gz"
+    sha256 "37ab16e53adf028a0426cb3bd64545f767762bc6e7dae884793814b0ac18541b"
+  end
+
+  resource "zchat-channel-server" do
+    url "https://files.pythonhosted.org/packages/7d/85/11011e90a3699ee0d53357667bafad547f4f37f03a69e73f2cd28003634f/zchat_channel_server-0.2.0.tar.gz"
+    sha256 "9541f91502aa769f6af8772da05925525c968ebab7ca58795b7997d76b56cfcd"
+  end
+
+  resource "tomli-w" do
+    url "https://files.pythonhosted.org/packages/49/05/6bf21838623186b91aeef5cb1571f52571c11fee41f0f22714f8a553fad3/tomli_w-1.2.0.tar.gz"
+    sha256 "2e19e3e5fe6e62930f44e9e5e281e91a753ad8a65e8a09bae1e4b158083e7cb0"
+  end
+
+  # Third-party PyPI resources
   resource "annotated-doc" do
     url "https://files.pythonhosted.org/packages/57/ba/046ceea27344560984e26a590f90bc7f4a75b06701f653222458922b558c/annotated_doc-0.0.4.tar.gz"
     sha256 "fbcda96e87e9c92ad167c2e53839e57503ecfda18804ea28102353485033faa4"
@@ -226,21 +242,20 @@ class Zchat < Formula
     venv = virtualenv_create(libexec, "python3.14")
 
     if build.head?
-      # Dev channel: install from git checkout with submodules
-      system "git", "submodule", "update", "--init"
+      # Dev channel: install from git with PyPI resources for dependencies
       # Generate _version.py from git commit hash
       commit = Utils.safe_popen_read("git", "-C", buildpath, "rev-parse", "--short", "HEAD").strip
       File.write(buildpath/"zchat/_version.py",
         "__version__ = \"HEAD-#{commit}\"\n__version_tuple__ = (0, 0, 0, \"HEAD-#{commit}\")\n")
-      # Patch pyproject.toml to avoid hatch-vcs (needs git tags + network)
-      inreplace buildpath/"pyproject.toml", 'dynamic = ["version"]', 'version = "0.0.0"'
-      inreplace buildpath/"pyproject.toml", 'requires = ["hatchling", "hatch-vcs"]', 'requires = ["hatchling"]'
-      # Remove uv source overrides (editable paths break pip install)
-      inreplace buildpath/"pyproject.toml", /^\[tool\.uv\.sources\].*?\n\n/m, "\n"
+      # Patch pyproject.toml: static version + remove hatch-vcs + remove uv sources
+      inreplace buildpath/"pyproject.toml" do |s|
+        s.gsub! 'dynamic = ["version"]', 'version = "0.0.0"'
+        s.gsub! 'requires = ["hatchling", "hatch-vcs"]', 'requires = ["hatchling"]'
+        s.gsub! /^\[tool\.hatch\.version\].*?\n.*?\n/, ""
+        s.gsub! /^\[tool\.hatch\.build\.hooks\.vcs\].*?\n.*?\n/, ""
+        s.gsub! /^\[tool\.uv\.sources\].*?\n(.*=.*\n)*/, ""
+      end
       venv.pip_install resources
-      # Install submodules from local checkout
-      system libexec/"bin/pip", "install", "--no-deps", buildpath/"zchat-protocol"
-      system libexec/"bin/pip", "install", "--no-deps", buildpath/"zchat-channel-server"
       system libexec/"bin/pip", "install", "--no-deps", buildpath
     else
       # Stable channel: all from PyPI resources
