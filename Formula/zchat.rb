@@ -6,6 +6,8 @@ class Zchat < Formula
   url "https://files.pythonhosted.org/packages/52/ee/7fa2ccd845ec34f36e5752e781b9b819b260cb4628e48b6a0ce67da5d1e0/zchat-0.3.0.tar.gz"
   sha256 "5718e6a8f7af2289a215771a1d282f6e0db40818a1b8ff33cca06524ac1c2748"
   license "MIT"
+  # HEAD tracks the latest commit on main — install with: brew install --HEAD zchat
+  # Upgrade with: brew upgrade --fetch-HEAD zchat
   head "https://github.com/ezagent42/zchat.git", branch: "main"
 
   depends_on "cryptography"
@@ -225,7 +227,10 @@ class Zchat < Formula
 
     if build.head?
       # Dev channel: install from git checkout + submodule repos
+      # hatch-vcs needs git tags for versioning — fetch them
+      system "git", "fetch", "--tags", "--force"
       venv.pip_install resources
+      system libexec/"bin/pip", "install", "hatch-vcs"
       system libexec/"bin/pip", "install", "--no-deps",
         "zchat-protocol @ git+https://github.com/ezagent42/zchat-protocol.git@main",
         "zchat-channel-server @ git+https://github.com/ezagent42/claude-zchat-channel.git@main"
