@@ -226,19 +226,22 @@ class Zchat < Formula
     venv = virtualenv_create(libexec, "python3.14")
 
     if build.head?
-      # Dev channel: install from git checkout + submodule repos
-      # Generate _version.py from git (avoids needing hatch-vcs at build time)
+      # Dev channel: install from git checkout with submodules
+      system "git", "submodule", "update", "--init"
+      # Generate _version.py from git commit hash
       commit = Utils.safe_popen_read("git", "-C", buildpath, "rev-parse", "--short", "HEAD").strip
       File.write(buildpath/"zchat/_version.py",
         "__version__ = \"HEAD-#{commit}\"\n__version_tuple__ = (0, 0, 0, \"HEAD-#{commit}\")\n")
-      # Switch to static version to avoid hatch-vcs dependency during build
+      # Patch pyproject.toml to avoid hatch-vcs (needs git tags + network)
       inreplace buildpath/"pyproject.toml", 'dynamic = ["version"]', 'version = "0.0.0"'
       inreplace buildpath/"pyproject.toml", 'requires = ["hatchling", "hatch-vcs"]', 'requires = ["hatchling"]'
+      # Remove uv source overrides (editable paths break pip install)
+      inreplace buildpath/"pyproject.toml", /^\[tool\.uv\.sources\].*?\n\n/m, "\n"
       venv.pip_install resources
-      system libexec/"bin/pip", "install", "--no-deps",
-        "zchat-protocol @ git+https://github.com/ezagent42/zchat-protocol.git@main",
-        "zchat-channel-server @ git+https://github.com/ezagent42/claude-zchat-channel.git@main"
-      system libexec/"bin/pip", "install", "--no-deps", "."
+      # Install submodules from local checkout
+      system libexec/"bin/pip", "install", "--no-deps", buildpath/"zchat-protocol"
+      system libexec/"bin/pip", "install", "--no-deps", buildpath/"zchat-channel-server"
+      system libexec/"bin/pip", "install", "--no-deps", buildpath
     else
       # Stable channel: all from PyPI resources
       venv.pip_install resources
