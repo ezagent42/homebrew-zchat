@@ -227,10 +227,14 @@ class Zchat < Formula
 
     if build.head?
       # Dev channel: install from git checkout + submodule repos
-      # hatch-vcs needs git tags for versioning — fetch them
-      system "git", "fetch", "--tags", "--force"
+      # Generate _version.py from git (avoids needing hatch-vcs at build time)
+      commit = Utils.safe_popen_read("git", "-C", buildpath, "rev-parse", "--short", "HEAD").strip
+      File.write(buildpath/"zchat/_version.py",
+        "__version__ = \"HEAD-#{commit}\"\n__version_tuple__ = (0, 0, 0, \"HEAD-#{commit}\")\n")
+      # Switch to static version to avoid hatch-vcs dependency during build
+      inreplace buildpath/"pyproject.toml", 'dynamic = ["version"]', 'version = "0.0.0"'
+      inreplace buildpath/"pyproject.toml", 'requires = ["hatchling", "hatch-vcs"]', 'requires = ["hatchling"]'
       venv.pip_install resources
-      system libexec/"bin/pip", "install", "hatch-vcs"
       system libexec/"bin/pip", "install", "--no-deps",
         "zchat-protocol @ git+https://github.com/ezagent42/zchat-protocol.git@main",
         "zchat-channel-server @ git+https://github.com/ezagent42/claude-zchat-channel.git@main"
