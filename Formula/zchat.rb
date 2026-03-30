@@ -16,15 +16,13 @@ class Zchat < Formula
   depends_on "rpds-py"
   depends_on "tmux"
 
-  # zchat submodule packages (from PyPI — submodules can't be cloned in Homebrew sandbox)
+  # zchat submodule packages (fetched from GitHub during download phase)
   resource "zchat-protocol" do
-    url "https://files.pythonhosted.org/packages/11/f3/8e193138cc9a8d7cffa9676b189d38d1635e7b205c74ade579a9373495a4/zchat_protocol-0.1.0.tar.gz"
-    sha256 "37ab16e53adf028a0426cb3bd64545f767762bc6e7dae884793814b0ac18541b"
+    url "https://github.com/ezagent42/zchat-protocol.git", branch: "main"
   end
 
   resource "zchat-channel-server" do
-    url "https://files.pythonhosted.org/packages/7d/85/11011e90a3699ee0d53357667bafad547f4f37f03a69e73f2cd28003634f/zchat_channel_server-0.2.0.tar.gz"
-    sha256 "9541f91502aa769f6af8772da05925525c968ebab7ca58795b7997d76b56cfcd"
+    url "https://github.com/ezagent42/claude-zchat-channel.git", branch: "main"
   end
 
   resource "tomli-w" do
