@@ -3,8 +3,8 @@ class Zchat < Formula
 
   desc "Multi-agent collaboration over IRC — CLI for Claude Code agents"
   homepage "https://github.com/ezagent42/zchat"
-  url "https://files.pythonhosted.org/packages/80/82/887ebea04a7fffddc2b365024e50dd376fdceb9ef1d14dc5e97eba410998/zchat-0.3.1.dev27.tar.gz"
-  sha256 "7aa38a952c9e24f426fb9947116a8f22c9c681612e0d57b042a54a5511a85d47"
+  url "https://files.pythonhosted.org/packages/cd/b3/8bb7f9a9c5e3594fbf3862ac4ce5fd996c7ba12b0f641789b0a1b03c8d13/zchat-0.3.1.dev56.tar.gz"
+  sha256 "ddeb4e15267136b01c8eb44e7729f36c9dd1103c07f3e4f8a2bd5a89a15091e4"
   license "MIT"
   # HEAD tracks the latest commit on main — install with: brew install --HEAD zchat
   # Upgrade with: brew upgrade --fetch-HEAD zchat
@@ -134,6 +134,16 @@ class Zchat < Formula
   resource "libtmux" do
     url "https://files.pythonhosted.org/packages/f7/85/99932ac9ddb90821778f8cabe32b81bbbec280dd1a14a457c512693fb11b/libtmux-0.55.0.tar.gz"
     sha256 "cdc4aa564b2325618d73d57cb0d7d92475d02026dba2b96a94f87ad328e7e79d"
+  end
+
+  resource "tmuxp" do
+    url "https://files.pythonhosted.org/packages/3a/c9/43b63b5f0ddc53c25052de75945dc4adc6b14984a38e1dea72c34cf398d7/tmuxp-1.67.0.tar.gz"
+    sha256 "990720d9fa5a6f4758790aecc201d2d29af0ad9ad8c47b58ac20acb0e8a94f12"
+  end
+
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
+    sha256 "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
   end
 
   resource "markdown-it-py" do
