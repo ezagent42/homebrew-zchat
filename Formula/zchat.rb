@@ -3,8 +3,8 @@ class Zchat < Formula
 
   desc "Multi-agent collaboration over IRC — CLI for Claude Code agents"
   homepage "https://github.com/ezagent42/zchat"
-  url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-  sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+  url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+  sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   license "MIT"
   # HEAD tracks the latest commit on main — install with: brew install --HEAD zchat
   # Upgrade with: brew upgrade --fetch-HEAD zchat
@@ -26,229 +26,229 @@ class Zchat < Formula
   end
 
   resource "tomli-w" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "segno" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   # Third-party PyPI resources
   resource "annotated-doc" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "anyio" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "attrs" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "h11" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "httpcore" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "httpx" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "httpx-sse" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "irc" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "jaraco-collections" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "jaraco-context" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "jaraco-functools" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "jaraco-logging" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "jaraco-stream" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "jaraco-text" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "jsonschema" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "jsonschema-specifications" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "libtmux" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "tmuxp" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "pyyaml" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "markdown-it-py" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "mdurl" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "more-itertools" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "pydantic-settings" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "pyjwt" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "python-dateutil" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "python-dotenv" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "python-multipart" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "pytz" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "referencing" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "shellingham" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "sse-starlette" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "tempora" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "typer" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "typer-slim" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/c9/76/c1a862397918aa007d5cf4ac9bb68428f802019a6a9ffbc081f6ddc79547/zchat-0.3.1.dev116.tar.gz"
-    sha256 "b065d1cc25545c321d9bf1d655c782b679da11930d350323fdd2e436f1f9c6e2"
+    url "https://files.pythonhosted.org/packages/7c/9c/03492e0ad8edda42f41c2c1190c3b3dfdcd9f935b0f3112e04b7b497e2ce/zchat-0.3.1.dev117.tar.gz"
+    sha256 "1a48dcdd77b2539a4d42cafdcdfb1e2f9c4ef119b61ac4001a7054f8888896af"
   end
 
   def install
